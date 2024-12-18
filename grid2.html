@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html, body{
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: burlywood;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 2px black;
+            background-color: #fff;
+        }
+
+        body{
+            display: grid;
+            grid-template-columns: 
+                [inicio] 1fr
+                [metade-1 meio-1] 1fr
+                [metade-2 meio-2] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        box1{
+            grid-column-start: meio-2;
+            grid-column-end: fim;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>
